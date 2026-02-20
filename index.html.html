@@ -1,0 +1,486 @@
+<html lang="ru" class="scroll-smooth"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SlimBot — Индивидуальная программа снижения веса</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        /* Hiding scrollbar for cleaner horizontal scroll on mobile if needed */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-white text-zinc-900 antialiased selection:bg-violet-100 selection:text-violet-900">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-zinc-100">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="font-semibold tracking-tighter text-lg">SLIMBOT</div>
+            <a href="#start" class="hidden sm:inline-flex items-center justify-center h-9 px-4 rounded-full bg-zinc-900 text-white text-sm font-medium hover:bg-zinc-800 transition-colors">
+                Начать программу
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="pt-32 pb-20 md:pt-48 md:pb-32 px-6 max-w-5xl mx-auto text-center">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-violet-50 border border-violet-100 text-violet-700 text-xs font-medium mb-8">
+            <iconify-icon icon="solar:star-fall-linear" stroke-width="1.5"></iconify-icon>
+            Результат за 8 недель или возврат денег
+        </div>
+        
+        <h1 class="text-5xl md:text-7xl lg:text-8xl font-semibold tracking-tighter text-zinc-900 mb-8 leading-[1.1]">
+            Верни своё тело.<br>
+            <span class="text-zinc-400">Верни энергию. Верни себя.</span>
+        </h1>
+        
+        <p class="text-lg md:text-xl text-zinc-500 max-w-2xl mx-auto mb-10 leading-relaxed font-normal">
+            Индивидуальная программа снижения веса без голода и без обязательного спорта. 
+            Система, которая работает за тебя.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="#start" class="w-full sm:w-auto h-12 px-8 inline-flex items-center justify-center rounded-full bg-zinc-900 text-white text-base font-medium hover:bg-zinc-800 transition-all hover:scale-[1.02]">
+                Начать программу
+                <iconify-icon icon="solar:arrow-right-linear" stroke-width="1.5" class="ml-2 text-xl"></iconify-icon>
+            </a>
+        </div>
+    </header>
+
+    <!-- Pain Points -->
+    <section class="py-20 px-6 max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-semibold tracking-tight mb-4 flex items-center justify-center gap-3">
+                <iconify-icon icon="solar:heart-broken-linear" class="text-red-500" stroke-width="1.5"></iconify-icon>
+                Ты узнаёшь себя?
+            </h2>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Card 1 -->
+            <div class="p-6 rounded-2xl bg-zinc-50 border border-zinc-100 hover:border-zinc-200 transition-colors">
+                <iconify-icon icon="solar:hamburger-menu-linear" class="text-2xl text-zinc-400 mb-4" stroke-width="1.5"></iconify-icon>
+                <h3 class="font-medium text-lg mb-2">Вес стоит</h3>
+                <p class="text-zinc-500 text-sm">Вес не уходит, даже если кажется, что «ем немного» и ограничиваю себя.</p>
+            </div>
+            <!-- Card 2 -->
+            <div class="p-6 rounded-2xl bg-zinc-50 border border-zinc-100 hover:border-zinc-200 transition-colors">
+                <iconify-icon icon="solar:user-linear" class="text-2xl text-zinc-400 mb-4" stroke-width="1.5"></iconify-icon>
+                <h3 class="font-medium text-lg mb-2">Чужое тело</h3>
+                <p class="text-zinc-500 text-sm">После декрета тело изменилось, и отражение в зеркале больше не радует.</p>
+            </div>
+            <!-- Card 3 -->
+            <div class="p-6 rounded-2xl bg-zinc-50 border border-zinc-100 hover:border-zinc-200 transition-colors">
+                <iconify-icon icon="solar:donut-linear" class="text-2xl text-zinc-400 mb-4" stroke-width="1.5"></iconify-icon>
+                <h3 class="font-medium text-lg mb-2">Тяга к сладкому</h3>
+                <p class="text-zinc-500 text-sm">Днем держусь, а вечером срываюсь на сладкое или мучное.</p>
+            </div>
+            <!-- Card 4 -->
+            <div class="p-6 rounded-2xl bg-zinc-50 border border-zinc-100 hover:border-zinc-200 transition-colors">
+                <iconify-icon icon="solar:restart-linear" class="text-2xl text-zinc-400 mb-4" stroke-width="1.5"></iconify-icon>
+                <h3 class="font-medium text-lg mb-2">Замкнутый круг</h3>
+                <p class="text-zinc-500 text-sm">Диеты работают 2 недели — потом срыв и возврат веса с плюсом.</p>
+            </div>
+            <!-- Card 5 -->
+            <div class="p-6 rounded-2xl bg-zinc-50 border border-zinc-100 hover:border-zinc-200 transition-colors">
+                <iconify-icon icon="solar:battery-charge-minimalistic-linear" class="text-2xl text-zinc-400 mb-4" stroke-width="1.5"></iconify-icon>
+                <h3 class="font-medium text-lg mb-2">Нет сил на спорт</h3>
+                <p class="text-zinc-500 text-sm">Усталость такая, что мысль о спортзале вызывает отторжение.</p>
+            </div>
+            <!-- Card 6 -->
+            <div class="p-6 rounded-2xl bg-zinc-50 border border-zinc-100 hover:border-zinc-200 transition-colors">
+                <iconify-icon icon="solar:compass-linear" class="text-2xl text-zinc-400 mb-4" stroke-width="1.5"></iconify-icon>
+                <h3 class="font-medium text-lg mb-2">Нет системы</h3>
+                <p class="text-zinc-500 text-sm">Вроде всё знаю про ПП, но собрать это в работающую систему не получается.</p>
+            </div>
+        </div>
+        
+        <div class="mt-12 text-center">
+            <p class="text-xl md:text-2xl font-medium text-zinc-900 tracking-tight">Проблема не в тебе. <span class="text-zinc-400">Проблема в отсутствии системы.</span></p>
+        </div>
+    </section>
+
+    <!-- Physiology Section -->
+    <section class="py-20 px-6 bg-zinc-900 text-white rounded-3xl mx-4 md:mx-6 shadow-2xl">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="inline-flex items-center justify-center p-3 bg-zinc-800 rounded-full mb-8">
+                <iconify-icon icon="solar:brain-linear" class="text-3xl text-violet-400" stroke-width="1.5"></iconify-icon>
+            </div>
+            <h2 class="text-3xl md:text-4xl font-semibold tracking-tight mb-8">Как всё работает на самом деле</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left mb-12">
+                <div class="p-8 rounded-2xl bg-zinc-800/50 border border-zinc-700">
+                    <div class="text-sm text-zinc-400 uppercase tracking-widest mb-4 font-medium">Физиология простая</div>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <iconify-icon icon="solar:graph-up-linear" class="text-red-400 mt-1" stroke-width="1.5"></iconify-icon>
+                            <span>Профицит калорий = набор веса</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <iconify-icon icon="solar:graph-down-linear" class="text-emerald-400 mt-1" stroke-width="1.5"></iconify-icon>
+                            <span>Дефицит калорий = снижение веса</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="p-8 rounded-2xl bg-violet-600/10 border border-violet-500/30">
+                    <div class="text-sm text-violet-300 uppercase tracking-widest mb-4 font-medium">Решение</div>
+                    <p class="mb-4 text-zinc-200">Но без структуры удерживать дефицит невозможно.</p>
+                    <p class="font-medium text-white text-lg">Мы убрали хаос и оставили систему.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What is SlimBot -->
+    <section class="py-24 px-6 max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+                <div class="inline-flex items-center gap-2 text-violet-600 font-medium mb-4">
+                    <iconify-icon icon="solar:robot-linear" stroke-width="1.5"></iconify-icon>
+                    Что такое SlimBot
+                </div>
+                <h2 class="text-3xl md:text-5xl font-semibold tracking-tight mb-6 text-zinc-900">
+                    Персональный план питания каждый день в Telegram
+                </h2>
+                <div class="space-y-6">
+                    <div class="flex gap-4">
+                        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-zinc-100 flex items-center justify-center">
+                            <iconify-icon icon="solar:clipboard-check-linear" class="text-zinc-600 text-xl" stroke-width="1.5"></iconify-icon>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-zinc-900">Конкретное меню</h4>
+                            <p class="text-sm text-zinc-500 mt-1">Чёткие веса продуктов. Ты просыпаешься — и уже знаешь, что есть.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-zinc-100 flex items-center justify-center">
+                            <iconify-icon icon="solar:calculator-minimalistic-linear" class="text-zinc-600 text-xl" stroke-width="1.5"></iconify-icon>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-zinc-900">Никаких подсчетов</h4>
+                            <p class="text-sm text-zinc-500 mt-1">Забудь про калькуляторы калорий. Мы всё посчитали за тебя.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-zinc-100 flex items-center justify-center">
+                            <iconify-icon icon="solar:magic-stick-linear" class="text-zinc-600 text-xl" stroke-width="1.5"></iconify-icon>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-zinc-900">Никакой «интуитивности»</h4>
+                            <p class="text-sm text-zinc-500 mt-1">Просто следуй плану. Система убирает тревожность выбора.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="relative bg-zinc-50 rounded-3xl p-8 border border-zinc-100">
+                <!-- Abstract UI Representation -->
+                <div class="bg-white rounded-2xl shadow-sm border border-zinc-100 p-6 mb-4">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-sm font-medium text-zinc-400">Сегодня, Завтрак</span>
+                        <span class="text-xs bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded-full">420 ккал</span>
+                    </div>
+                    <div class="flex items-center gap-4 mb-3">
+                        <div class="w-12 h-12 rounded-lg bg-zinc-100 flex items-center justify-center">
+                             <iconify-icon icon="solar:chef-hat-linear" class="text-zinc-400" stroke-width="1.5"></iconify-icon>
+                        </div>
+                        <div>
+                            <div class="text-sm font-medium">Омлет с овощами</div>
+                            <div class="text-xs text-zinc-500">2 яйца, томаты 100г</div>
+                        </div>
+                    </div>
+                    <div class="w-full h-2 bg-zinc-100 rounded-full overflow-hidden">
+                        <div class="w-3/4 h-full bg-violet-500"></div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl shadow-sm border border-zinc-100 p-6 opacity-70 scale-95 origin-top">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-sm font-medium text-zinc-400">Сегодня, Обед</span>
+                        <span class="text-xs bg-zinc-100 text-zinc-500 px-2 py-0.5 rounded-full">540 ккал</span>
+                    </div>
+                    <div class="h-4 w-32 bg-zinc-100 rounded mb-2"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Methodology & No Sport -->
+    <section class="py-20 px-6 bg-zinc-50 border-y border-zinc-100">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+            <!-- Nutrition -->
+            <div>
+                <div class="mb-6 inline-flex p-3 rounded-xl bg-green-100 text-green-700">
+                    <iconify-icon icon="solar:leaf-linear" class="text-2xl" stroke-width="1.5"></iconify-icon>
+                </div>
+                <h3 class="text-2xl font-semibold tracking-tight mb-4">Основа программы</h3>
+                <ul class="space-y-3 mb-6">
+                    <li class="flex items-center gap-3 text-zinc-700">
+                        <iconify-icon icon="solar:check-circle-linear" class="text-green-600 flex-shrink-0" stroke-width="1.5"></iconify-icon>
+                        Простая высокобелковая модель
+                    </li>
+                    <li class="flex items-center gap-3 text-zinc-700">
+                        <iconify-icon icon="solar:check-circle-linear" class="text-green-600 flex-shrink-0" stroke-width="1.5"></iconify-icon>
+                        Достаточно еды, стабильная сытость
+                    </li>
+                    <li class="flex items-center gap-3 text-zinc-700">
+                        <iconify-icon icon="solar:check-circle-linear" class="text-green-600 flex-shrink-0" stroke-width="1.5"></iconify-icon>
+                        Минимум скачков сахара
+                    </li>
+                </ul>
+                <div class="p-5 rounded-xl bg-white border border-zinc-200 text-sm text-zinc-600">
+                    <p class="mb-2 font-medium text-zinc-900">Тяга на сладкое?</p>
+                    <p>Чаще это дофаминовая привычка, а не голод. Мы учим отличать одно от другого.</p>
+                </div>
+            </div>
+
+            <!-- Sport -->
+            <div>
+                <div class="mb-6 inline-flex p-3 rounded-xl bg-blue-100 text-blue-700">
+                    <iconify-icon icon="solar:armchair-2-linear" class="text-2xl" stroke-width="1.5"></iconify-icon>
+                </div>
+                <h3 class="text-2xl font-semibold tracking-tight mb-4">Без обязательных тренировок</h3>
+                <ul class="space-y-3 mb-6">
+                    <li class="flex items-center gap-3 text-zinc-700">
+                        <iconify-icon icon="solar:forbidden-circle-linear" class="text-zinc-400 flex-shrink-0" stroke-width="1.5"></iconify-icon>
+                        Без спортзала
+                    </li>
+                    <li class="flex items-center gap-3 text-zinc-700">
+                        <iconify-icon icon="solar:forbidden-circle-linear" class="text-zinc-400 flex-shrink-0" stroke-width="1.5"></iconify-icon>
+                        Без кардио
+                    </li>
+                    <li class="flex items-center gap-3 text-zinc-700">
+                        <iconify-icon icon="solar:forbidden-circle-linear" class="text-zinc-400 flex-shrink-0" stroke-width="1.5"></iconify-icon>
+                        Без «3 раза в неделю минимум»
+                    </li>
+                </ul>
+                <div class="p-5 rounded-xl bg-white border border-zinc-200 text-sm text-zinc-600">
+                    <p>Физическая активность — плюс. <span class="text-zinc-900 font-medium">Но для результата на весах она не обязательна.</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Story Section -->
+    <section class="py-24 px-6 max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+            <span class="text-violet-600 font-medium tracking-wide uppercase text-xs">Реальная история</span>
+            <h2 class="text-3xl md:text-4xl font-semibold tracking-tight mt-2">Этот путь прошла Анастасия</h2>
+        </div>
+
+        <div class="prose prose-lg prose-zinc mx-auto">
+            <div class="bg-white p-8 rounded-2xl border border-zinc-100 shadow-sm mb-8">
+                <p class="font-medium text-zinc-900 mb-4">После двух декретов:</p>
+                <div class="flex flex-wrap gap-2 mb-6">
+                    <span class="px-3 py-1 bg-zinc-100 text-zinc-600 rounded-full text-sm">лишний вес</span>
+                    <span class="px-3 py-1 bg-zinc-100 text-zinc-600 rounded-full text-sm">усталость</span>
+                    <span class="px-3 py-1 bg-zinc-100 text-zinc-600 rounded-full text-sm">тяга к сладкому</span>
+                    <span class="px-3 py-1 bg-zinc-100 text-zinc-600 rounded-full text-sm">раздражение</span>
+                </div>
+                <p class="text-zinc-500 text-base">
+                    Она знала теорию. Пробовала диеты. Срывалась. Ощущение, что «я потеряла себя».
+                    Пока не обратилась к профессиональному нутрициологу.
+                </p>
+                <div class="my-6 p-4 bg-zinc-50 border-l-4 border-zinc-300 text-zinc-600 text-sm">
+                    Стоимость сопровождения — <span class="font-semibold text-zinc-900">20 000 ₽ в месяц.</span>
+                </div>
+                <p class="text-zinc-500 text-base">
+                    Впервые она получила систему: расчет калорий, высокобелковую модель, чёткий план и контроль.
+                    <br><br>
+                    <span class="text-zinc-900 font-medium">И вес начал уходить.</span> Без изнурительных тренировок. Без голодания.
+                </p>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mt-12 bg-zinc-900 text-white p-8 md:p-12 rounded-3xl">
+            <div>
+                <iconify-icon icon="solar:lightbulb-linear" class="text-4xl text-yellow-300 mb-4" stroke-width="1.5"></iconify-icon>
+                <h3 class="text-2xl font-semibold mb-4">Почему мы создали SlimBot</h3>
+                <p class="text-zinc-300 mb-4">
+                    Мы поняли: Система не должна стоить 20 000 ₽.
+                </p>
+                <p class="text-zinc-300">
+                    Её можно автоматизировать. Упростить. Сделать доступной.
+                </p>
+            </div>
+            <div class="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/10">
+                <div class="flex items-center gap-3 mb-2">
+                    <iconify-icon icon="solar:users-group-rounded-linear" class="text-violet-300 text-xl" stroke-width="1.5"></iconify-icon>
+                    <span class="font-medium">Ты не одна</span>
+                </div>
+                <ul class="space-y-3 text-sm text-zinc-200">
+                    <li class="flex items-center gap-2"><iconify-icon icon="solar:check-read-linear" class="text-violet-400"></iconify-icon> Малые группы по возрастам</li>
+                    <li class="flex items-center gap-2"><iconify-icon icon="solar:check-read-linear" class="text-violet-400"></iconify-icon> ИИ-ассистент отвечает на вопросы</li>
+                    <li class="flex items-center gap-2"><iconify-icon icon="solar:check-read-linear" class="text-violet-400"></iconify-icon> Закрытый Telegram-канал</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Timeline -->
+    <section class="py-20 px-6 max-w-5xl mx-auto">
+        <h2 class="text-3xl font-semibold tracking-tight text-center mb-16">Что происходит за 8 недель</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <div class="p-6 border border-zinc-200 rounded-2xl hover:shadow-md transition-shadow">
+                <iconify-icon icon="solar:body-linear" class="text-3xl text-zinc-900 mb-4" stroke-width="1.5"></iconify-icon>
+                <h4 class="font-medium mb-1">Уходит лишний вес</h4>
+                <p class="text-xs text-zinc-500">Плавное и стабильное снижение без стресса для организма.</p>
+            </div>
+            <div class="p-6 border border-zinc-200 rounded-2xl hover:shadow-md transition-shadow">
+                <iconify-icon icon="solar:waterdrops-linear" class="text-3xl text-zinc-900 mb-4" stroke-width="1.5"></iconify-icon>
+                <h4 class="font-medium mb-1">Уходит отёчность</h4>
+                <p class="text-xs text-zinc-500">Лицо становится свежее, тело — более подтянутым.</p>
+            </div>
+            <div class="p-6 border border-zinc-200 rounded-2xl hover:shadow-md transition-shadow">
+                <iconify-icon icon="solar:bolt-linear" class="text-3xl text-zinc-900 mb-4" stroke-width="1.5"></iconify-icon>
+                <h4 class="font-medium mb-1">Появляется энергия</h4>
+                <p class="text-xs text-zinc-500">Сил хватает и на работу, и на семью, и на себя.</p>
+            </div>
+            <div class="p-6 border border-zinc-200 rounded-2xl hover:shadow-md transition-shadow">
+                <iconify-icon icon="solar:pie-chart-2-linear" class="text-3xl text-zinc-900 mb-4" stroke-width="1.5"></iconify-icon>
+                <h4 class="font-medium mb-1">Стабилизируется аппетит</h4>
+                <p class="text-xs text-zinc-500">Пропадают резкие приступы голода и "волчий" аппетит.</p>
+            </div>
+            <div class="p-6 border border-zinc-200 rounded-2xl hover:shadow-md transition-shadow sm:col-span-2 md:col-span-2 bg-violet-50 border-violet-100">
+                <iconify-icon icon="solar:stars-minimalistic-linear" class="text-3xl text-violet-600 mb-4" stroke-width="1.5"></iconify-icon>
+                <h4 class="font-medium mb-1 text-violet-900">Перемирие с собой</h4>
+                <p class="text-sm text-violet-700">Ты перестаёшь воевать со своим телом и начинаешь о нем заботиться.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guarantee -->
+    <section class="py-16 px-6 bg-zinc-50 border-y border-zinc-100">
+        <div class="max-w-3xl mx-auto text-center">
+            <iconify-icon icon="solar:shield-check-linear" class="text-5xl text-zinc-900 mb-6" stroke-width="1.5"></iconify-icon>
+            <h2 class="text-3xl font-semibold tracking-tight mb-4">Гарантия результата</h2>
+            <p class="text-lg text-zinc-600 mb-8">
+                Мы уверены в системе. Если за 8 недель ты не увидишь результат — <span class="text-zinc-900 font-medium">мы вернем деньги</span>. Без сложных условий.
+            </p>
+        </div>
+    </section>
+
+    <!-- Why Us Grid -->
+    <section class="py-24 px-6 max-w-6xl mx-auto">
+        <h2 class="text-3xl font-semibold tracking-tight mb-12 text-center">Почему выбирают нас</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="flex gap-4">
+                <div class="flex-shrink-0 w-8 h-8 rounded-full bg-black text-white flex items-center justify-center font-medium text-sm">1</div>
+                <div>
+                    <h4 class="font-medium text-zinc-900">Конкретный план</h4>
+                    <p class="text-sm text-zinc-500 mt-1">Не теория, а ежедневные действия.</p>
+                </div>
+            </div>
+            <div class="flex gap-4">
+                <div class="flex-shrink-0 w-8 h-8 rounded-full bg-black text-white flex items-center justify-center font-medium text-sm">2</div>
+                <div>
+                    <h4 class="font-medium text-zinc-900">Проверено на 100+</h4>
+                    <p class="text-sm text-zinc-500 mt-1">Реальные участницы, реальные результаты.</p>
+                </div>
+            </div>
+            <div class="flex gap-4">
+                <div class="flex-shrink-0 w-8 h-8 rounded-full bg-black text-white flex items-center justify-center font-medium text-sm">3</div>
+                <div>
+                    <h4 class="font-medium text-zinc-900">Без голода</h4>
+                    <p class="text-sm text-zinc-500 mt-1">Комфортное похудение без жестких ограничений.</p>
+                </div>
+            </div>
+            <div class="flex gap-4">
+                <div class="flex-shrink-0 w-8 h-8 rounded-full bg-black text-white flex items-center justify-center font-medium text-sm">4</div>
+                <div>
+                    <h4 class="font-medium text-zinc-900">Без обязательного спорта</h4>
+                    <p class="text-sm text-zinc-500 mt-1">Худеем за счет питания.</p>
+                </div>
+            </div>
+            <div class="flex gap-4">
+                <div class="flex-shrink-0 w-8 h-8 rounded-full bg-black text-white flex items-center justify-center font-medium text-sm">5</div>
+                <div>
+                    <h4 class="font-medium text-zinc-900">Поддержка + ИИ</h4>
+                    <p class="text-sm text-zinc-500 mt-1">Ответы на вопросы 24/7.</p>
+                </div>
+            </div>
+            <div class="flex gap-4">
+                <div class="flex-shrink-0 w-8 h-8 rounded-full bg-black text-white flex items-center justify-center font-medium text-sm">6</div>
+                <div>
+                    <h4 class="font-medium text-zinc-900">Гарантия возврата</h4>
+                    <p class="text-sm text-zinc-500 mt-1">Безопасный старт для тебя.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emotional Hook -->
+    <section class="py-20 px-6 text-center max-w-4xl mx-auto">
+        <iconify-icon icon="solar:chat-round-line-linear" class="text-4xl text-violet-500 mb-6" stroke-width="1.5"></iconify-icon>
+        <h2 class="text-3xl md:text-5xl font-semibold tracking-tight mb-8">Это не про килограммы</h2>
+        <div class="flex flex-wrap justify-center gap-3 md:gap-4">
+            <span class="px-5 py-2 rounded-full border border-zinc-200 text-zinc-600 bg-white">Снова надеть любимое платье</span>
+            <span class="px-5 py-2 rounded-full border border-zinc-200 text-zinc-600 bg-white">Чувствовать лёгкость</span>
+            <span class="px-5 py-2 rounded-full border border-zinc-200 text-zinc-600 bg-white">Смотреть на себя с удовольствием</span>
+            <span class="px-5 py-2 rounded-full border border-zinc-200 text-zinc-600 bg-white">Вернуть уверенность</span>
+            <span class="px-5 py-2 rounded-full border border-violet-100 text-violet-700 bg-violet-50">Перестать чувствовать вину за еду</span>
+        </div>
+    </section>
+
+    <!-- How to Start -->
+    <section id="start" class="py-24 px-6 bg-zinc-900 text-white">
+        <div class="max-w-5xl mx-auto">
+            <div class="flex flex-col md:flex-row items-start md:items-end justify-between mb-16 gap-6">
+                <h2 class="text-3xl md:text-5xl font-semibold tracking-tight">Как начать</h2>
+                <p class="text-zinc-400 max-w-sm pb-1">4 простых шага отделяют тебя от тела твоей мечты.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="relative group">
+                    <div class="text-6xl font-bold text-zinc-800 mb-4 group-hover:text-zinc-700 transition-colors">01</div>
+                    <h4 class="text-xl font-medium mb-2 text-white">Нажать «Старт»</h4>
+                    <p class="text-sm text-zinc-400">Переходи в нашего Telegram-бота.</p>
+                </div>
+                <div class="relative group">
+                    <div class="text-6xl font-bold text-zinc-800 mb-4 group-hover:text-zinc-700 transition-colors">02</div>
+                    <h4 class="text-xl font-medium mb-2 text-white">Заполнить анкету</h4>
+                    <p class="text-sm text-zinc-400">Короткий опрос для расчета параметров.</p>
+                </div>
+                <div class="relative group">
+                    <div class="text-6xl font-bold text-zinc-800 mb-4 group-hover:text-zinc-700 transition-colors">03</div>
+                    <h4 class="text-xl font-medium mb-2 text-white">Получить план</h4>
+                    <p class="text-sm text-zinc-400">Твой первый персональный рацион.</p>
+                </div>
+                <div class="relative group">
+                    <div class="text-6xl font-bold text-zinc-800 mb-4 group-hover:text-zinc-700 transition-colors">04</div>
+                    <h4 class="text-xl font-medium mb-2 text-white">Следовать системе</h4>
+                    <p class="text-sm text-zinc-400">8 недель поддержки и результата.</p>
+                </div>
+            </div>
+
+            <div class="mt-16 pt-16 border-t border-zinc-800 text-center">
+                <h2 class="text-3xl md:text-5xl font-semibold tracking-tight mb-8">
+                    Ты не обязана мириться с этим телом.<br>
+                    <span class="text-zinc-500">Ты можешь его изменить.</span>
+                </h2>
+                <button class="w-full md:w-auto px-10 py-4 bg-white text-zinc-900 rounded-full font-semibold text-lg hover:bg-zinc-200 transition-colors">
+                    👉 Начать сейчас
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Simple Footer -->
+    <footer class="py-12 px-6 bg-zinc-900 text-zinc-500 text-center text-sm border-t border-zinc-800">
+        <p>© 2024 SlimBot. Все права защищены.</p>
+    </footer>
+
+
+</body></html>
