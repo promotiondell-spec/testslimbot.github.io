@@ -25,11 +25,15 @@
 </head>
 <body class="bg-white text-zinc-900 antialiased selection:bg-violet-100 selection:text-violet-900">
 
-    <!-- Navigation -->
+     <!-- Navigation -->
     <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-zinc-100">
-        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-            <img src="logobot.svg" alt="SlimBot" class="h-10 w-auto">
-            <a href="https://t.me/tgslimbot" class="hidden sm:inline-flex items-center justify-center h-9 px-4 rounded-full bg-zinc-900 text-white text-sm font-medium hover:bg-zinc-800 transition-colors">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between sm:justify-between">
+            <!-- Логотип слева на десктопе, по центру на мобильных -->
+            <div class="flex-1 sm:flex-none flex justify-center sm:justify-start">
+                <img src="logo.png" alt="SlimBot" class="h-10 w-auto">
+            </div>
+            <!-- Кнопка видна только на десктопе (sm и больше) -->
+            <a href="https://t.me/ваш_бот" class="hidden sm:inline-flex items-center justify-center h-9 px-4 rounded-full bg-zinc-900 text-white text-sm font-medium hover:bg-zinc-800 transition-colors">
                 Начать программу
             </a>
         </div>
